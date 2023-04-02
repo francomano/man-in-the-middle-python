@@ -1,2 +1,3 @@
 # ManInTheMiddle
-ARP Poisoning/Spoofing using Scapy Python Library
+pip install scapy
+python3 MITM.py
