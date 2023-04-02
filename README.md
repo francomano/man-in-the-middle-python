@@ -1,3 +1,4 @@
 # ManInTheMiddle
-pip install scapy
+pip install scapy  
+
 python3 MITM.py
