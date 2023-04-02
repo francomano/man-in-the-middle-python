@@ -6,5 +6,5 @@ sudo python3 MITM.py
 useful cmds to get information:  
 ip route show (check the default gateway)  
 ifconfig (check the intherfaces)  
-ping "broadcast" (check all the active hosts)
+ping "broadcast" (check all the active hosts)  
 netstat -ano (check the connections)
