@@ -9,4 +9,4 @@ ifconfig (check the intherfaces)
 ping "broadcast" (check all the active hosts)  
 netstat -ano (check the connections)  
 
-<img src=Man-in-the-Middle-1024x559.jpg alt="mitm" style="width:600px; height:300px"/>
+<img src=Man-in-the-Middle-1024x559.jpg alt="mitm" style="width:500px; height:300px"/>
